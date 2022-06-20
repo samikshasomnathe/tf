@@ -23,7 +23,7 @@ resource "aws_subnet" "public_subnet" {
     }
   
 }
-resource "aws_internet_getway" "igw" {
+resource "aws_internet_gateway" "igw" {
     vpc_id =aws_vpc.vpc1.id
 }
 resource "aws_default_route_table" "default_rt"{
