@@ -16,3 +16,12 @@ variable "zone_public" {
     default="ap-south-1b"
   
 }
+variable "ami"{
+    default="ami-05c8ca4485f8b138a" 
+}
+variable "instance_type"{
+    default="t2.micro"
+}
+variable "key"{
+    defaule= "kmkey"
+}

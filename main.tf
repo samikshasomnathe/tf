@@ -6,3 +6,12 @@ module "my_vpc"{
     cidr_public=var.cidr_public
     zone_public=var.zone_public
 } 
+module "my_instance"{
+    source= "./module/ec2"
+    ami=var.ami
+    instance_type=var.instance_type
+    key_name=var.key
+    private_subnet_id=module.my_vpc.private_subnet_id
+    sg_id=module.my_vpc.sg.id
+    public_subnet_id=module.my_vpc.public_subnet_id
+}
