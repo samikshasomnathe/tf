@@ -9,7 +9,7 @@ resource "aws_instance" "instance1"{
     subnet_id = var.private_subnet_id
 }
 
-resource "aws instance" "instance2"{
+resource "aws_instance" "instance2"{
     ami=var.ami
     instance_type=var.instance_type
     vpc_security_group_ids= var.sg_id
