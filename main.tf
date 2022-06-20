@@ -13,5 +13,5 @@ module "ec2"{
     key_name=var.key_name
     private_subnet_id=module.my_vpc.private_subnet_id
     sg_id=[module.my_vpc.sg_id]
-    public_subnet_id=module.my_vpc.public_subnet_id
+    public_subnet_id=module.my_vpc.Public_subnet_id
 }
