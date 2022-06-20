@@ -1,7 +1,7 @@
 resource "aws_instance" "instance1"{
     ami=var.ami
     instance_type=var.instance_type
-    key_name=var.key
+    key_name=var.key_name
     vpc_security_group_ids=var.sg_id
     tags = {
         Name="instance1"
@@ -12,6 +12,7 @@ resource "aws_instance" "instance1"{
 resource "aws_instance" "instance2"{
     ami=var.ami
     instance_type=var.instance_type
+    key_name=var.key_name
     vpc_security_group_ids= var.sg_id
     tags = {
         name = "instance2"
