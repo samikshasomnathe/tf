@@ -6,7 +6,7 @@ module "my_vpc"{
     cidr_public=var.cidr_public
     zone_public=var.zone_public
 } 
-module "my_instance"{
+module "my_ec2"{
     source= "./module/ec2"
     ami=var.ami
     instance_type=var.instance_type
